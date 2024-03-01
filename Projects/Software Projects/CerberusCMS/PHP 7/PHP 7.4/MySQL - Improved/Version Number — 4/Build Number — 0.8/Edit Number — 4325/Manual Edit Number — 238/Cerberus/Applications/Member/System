@@ -80,12 +80,12 @@
 */
 
 $_Application_Module_Member_System_DB_Query_SELECT_ALL_STATISTICS					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_statistics ORDER BY id ASC LIMIT 1");
-$_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_members ORDER BY id ASC");
-$_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS_ACTIVE				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_members WHERE member_status_account_active='1' ORDER BY id ASC");
-$_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS_INACTIVE				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_members WHERE member_status_account_active='0' ORDER BY id ASC");
-$_Application_Module_Member_System_DB_Query_SELECT_ALL_COMMENTS					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_comments");
-$_Application_Module_Member_System_DB_Query_SELECT_ALL_FILES					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_files");
-$_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_forum_forum");
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS						= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_members ORDER BY id ASC");
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS_ACTIVE					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_members WHERE member_status_account_active='1' ORDER BY id ASC");
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS_INACTIVE					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_members WHERE member_status_account_active='0' ORDER BY id ASC");
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_COMMENTS						= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_comments");
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_FILES						= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_files");
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM						= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_forum_forum");
 $_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_TOPICS					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_forum_topic");
 $_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_TOPIC_MESSAGES				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_forum_topic_message");
 
@@ -99,10 +99,10 @@ $_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS				=
 $_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS_TOPICS			= $_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_TOPICS->num_rows;
 $_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS_TOPIC_MESSAGES		= $_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_TOPIC_MESSAGES->num_rows;
 $_Application_Module_Member_System_DB_Query_SELECT_ALL_FILES_NUMBER_OF_ROWS				= $_Application_Module_Member_System_DB_Query_SELECT_ALL_FILES->num_rows;
-$_Application_Module_Member_System_DB_Query_SELECT_ALL_COMMENTS_NUMBER_OF_ROWS			= $_Application_Module_Member_System_DB_Query_SELECT_ALL_COMMENTS->num_rows;
-$_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS_NUMBER_OF_ROWS			= $_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS->num_rows;
-$_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS_NUMBER_OF_ROWS_ACTIVE		= $_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS_ACTIVE->num_rows;
-$_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS_NUMBER_OF_ROWS_INACTIVE		= $_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS_INACTIVE->num_rows;
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_COMMENTS_NUMBER_OF_ROWS				= $_Application_Module_Member_System_DB_Query_SELECT_ALL_COMMENTS->num_rows;
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS_NUMBER_OF_ROWS				= $_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS->num_rows;
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS_NUMBER_OF_ROWS_ACTIVE			= $_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS_ACTIVE->num_rows;
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS_NUMBER_OF_ROWS_INACTIVE			= $_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS_INACTIVE->num_rows;
 
 /*
  ============================================================================================================
@@ -112,7 +112,7 @@ $_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS_NUMBER_OF_ROWS_IN
 
 $_Application_Module_Member_System_DB_Query_FETCH_ARRAY_STATISTICS					= $_Application_Module_Member_System_DB_Query_SELECT_ALL_STATISTICS->fetch_array(MYSQLI_BOTH);
 
-$_Application_Module_Member_System_LIST_TOTAL_NUMBER_OF_DOCUMENT_EXECUTIONS_NON_UNIQUE		= $_Application_Module_Member_System_DB_Query_FETCH_ARRAY_STATISTICS['statistics_total_number_of_document_executions_non_unique'];
+$_Application_Module_Member_System_LIST_TOTAL_NUMBER_OF_DOCUMENT_EXECUTIONS_NON_UNIQUE			= $_Application_Module_Member_System_DB_Query_FETCH_ARRAY_STATISTICS['statistics_total_number_of_document_executions_non_unique'];
 $_Application_Module_Member_System_LIST_TOTAL_NUMBER_OF_DOCUMENT_EXECUTIONS_UNIQUE			= $_Application_Module_Member_System_DB_Query_FETCH_ARRAY_STATISTICS['statistics_total_number_of_document_executions_unique'];
 $_Application_Module_Member_System_LIST_INSTALLATION_DATE						= $_Application_Module_Member_System_DB_Query_FETCH_ARRAY_STATISTICS['statistics_installation_date'];
 
@@ -124,11 +124,11 @@ $_Application_Module_Member_System_LIST_INSTALLATION_DATE						= $_Application_M
 
 if ($_GLOBAL_SYSTEM_STATUS_GZIP == "1") {
 
-	$_Application_Module_Member_System_Status_GZIP					= "On";
+	$_Application_Module_Member_System_Status_GZIP							= "On";
 
 } else { // [ + ] IF: G.N.U. ZIP Compression System Setting Is: Off
 
-	$_Application_Module_Member_System_Status_GZIP					= "Off";
+	$_Application_Module_Member_System_Status_GZIP							= "Off";
 
 } // [ + ] IF: G.N.U. ZIP Compression System Setting Is: On
 
@@ -140,11 +140,11 @@ if ($_GLOBAL_SYSTEM_STATUS_GZIP == "1") {
 
 if ($_GLOBAL_SYSTEM_PLUGIN_STATUS_CAMERA == "1") {
 
-	$_Application_Module_Member_System_PlugIn_Status_Camera				= "On";
+	$_Application_Module_Member_System_PlugIn_Status_Camera						= "On";
 
 } else { // [ + ] IF: The Camera Plug-In System Setting Is: Off
 
-	$_Application_Module_Member_System_PlugIn_Status_Camera				= "Off";
+	$_Application_Module_Member_System_PlugIn_Status_Camera						= "Off";
 
 } // [ + ] IF: The System :: Plug-In :: Status :: Camera :: Is: On OR Off
 
@@ -156,11 +156,11 @@ if ($_GLOBAL_SYSTEM_PLUGIN_STATUS_CAMERA == "1") {
 
 if ($_GLOBAL_SYSTEM_PLUGIN_STATUS_MICROPHONE == "1") {
 
-	$_Application_Module_Member_System_PlugIn_Status_Microphone				= "On";
+	$_Application_Module_Member_System_PlugIn_Status_Microphone					= "On";
 
 } else { // [ + ] IF: The Microphone Plug-In System Setting Is: Off
 
-	$_Application_Module_Member_System_PlugIn_Status_Microphone				= "Off";
+	$_Application_Module_Member_System_PlugIn_Status_Microphone					= "Off";
 
 } // [ + ] IF: The System :: Plug-In :: Status :: Microphone :: Is: On OR Off
 
@@ -172,11 +172,11 @@ if ($_GLOBAL_SYSTEM_PLUGIN_STATUS_MICROPHONE == "1") {
 
 if ($_GLOBAL_SYSTEM_PLUGIN_STATUS_LOCATION == "1") {
 
-	$_Application_Module_Member_System_PlugIn_Status_Location				= "On";
+	$_Application_Module_Member_System_PlugIn_Status_Location					= "On";
 
 } else { // [ + ] IF: The Location Plug-In System Setting Is: Off
 
-	$_Application_Module_Member_System_PlugIn_Status_Location				= "Off";
+	$_Application_Module_Member_System_PlugIn_Status_Location					= "Off";
 
 } // [ + ] IF: The System :: Plug-In :: Status :: Location :: Is: On OR Off
 
@@ -188,13 +188,29 @@ if ($_GLOBAL_SYSTEM_PLUGIN_STATUS_LOCATION == "1") {
 
 if ($_GLOBAL_SYSTEM_PLUGIN_STATUS_NOTIFICATIONS == "1") {
 
-	$_Application_Module_Member_System_PlugIn_Status_Notifications			= "On";
+	$_Application_Module_Member_System_PlugIn_Status_Notifications					= "On";
 
 } else { // [ + ] IF: The Notifications Plug-In System Setting Is: Off
 
-	$_Application_Module_Member_System_PlugIn_Status_Notifications			= "Off";
+	$_Application_Module_Member_System_PlugIn_Status_Notifications					= "Off";
 
 } // [ + ] IF: The System :: Plug-In :: Status :: Notifications :: Is: On OR Off
+
+/*
+ ============================================================================================================
+ + IF: System :: Plug-In :: Status :: Secure-Delete :: Is: 0, Define AS OFF :: ELSE :: Is: 1, Define AS ON
+ ============================================================================================================
+*/
+
+if ($_GLOBAL_SYSTEM_PLUGIN_STATUS_ENCRYPTION == "1") {
+
+	$_Application_Module_Member_System_PlugIn_Status_Encryption					= "On";
+
+} else { // [ + ] IF: The Encryption Plug-In System Setting Is: Off
+
+	$_Application_Module_Member_System_PlugIn_Status_Encryption					= "Off";
+
+} // [ + ] IF: The System :: Plug-In :: Status :: Encryption :: Is: On OR Off
 
 /*
  ============================================================================================================
@@ -204,11 +220,11 @@ if ($_GLOBAL_SYSTEM_PLUGIN_STATUS_NOTIFICATIONS == "1") {
 
 if ($_GLOBAL_SYSTEM_PLUGIN_STATUS_SAFEHTML == "1") {
 
-	$_Application_Module_Member_System_PlugIn_Status_SafeHTML				= "On";
+	$_Application_Module_Member_System_PlugIn_Status_SafeHTML					= "On";
 
 } else { // [ + ] IF: The Safe-HTML Plug-In System Setting Is: Off
 
-	$_Application_Module_Member_System_PlugIn_Status_SafeHTML				= "Off";
+	$_Application_Module_Member_System_PlugIn_Status_SafeHTML					= "Off";
 
 } // [ + ] IF: The System :: Plug-In :: Status :: Safe-HTML :: Is: On OR Off
 
@@ -220,11 +236,11 @@ if ($_GLOBAL_SYSTEM_PLUGIN_STATUS_SAFEHTML == "1") {
 
 if ($_GLOBAL_SYSTEM_PLUGIN_STATUS_SECURE_DELETE == "1") {
 
-	$_Application_Module_Member_System_PlugIn_Status_Secure_Delete			= "On";
+	$_Application_Module_Member_System_PlugIn_Status_Secure_Delete					= "On";
 
 } else { // [ + ] IF: The Secure-Delete Plug-In System Setting Is: Off
 
-	$_Application_Module_Member_System_PlugIn_Status_Secure_Delete			= "Off";
+	$_Application_Module_Member_System_PlugIn_Status_Secure_Delete					= "Off";
 
 } // [ + ] IF: The System :: Plug-In :: Status :: Secure-Delete :: Is: On OR Off
 
@@ -236,11 +252,11 @@ if ($_GLOBAL_SYSTEM_PLUGIN_STATUS_SECURE_DELETE == "1") {
 
 if ($_GLOBAL_SYSTEM_PLUGIN_STATUS_TEXT_EDITOR == "1") {
 
-	$_Application_Module_Member_System_PlugIn_Status_Text_Editor			= "On";
+	$_Application_Module_Member_System_PlugIn_Status_Text_Editor					= "On";
 
 } else { // [ + ] IF: The Text-Editor Plug-In System Setting Is: Off
 
-	$_Application_Module_Member_System_PlugIn_Status_Text_Editor			= "Off";
+	$_Application_Module_Member_System_PlugIn_Status_Text_Editor					= "Off";
 
 } // [ + ] IF: The System :: Plug-In :: Status :: Text-Editor :: Is: On OR Off
 
@@ -252,11 +268,11 @@ if ($_GLOBAL_SYSTEM_PLUGIN_STATUS_TEXT_EDITOR == "1") {
 
 if ($_GLOBAL_SYSTEM_PLUGIN_STATUS_TIME == "1") {
 
-	$_Application_Module_Member_System_PlugIn_Status_Time					= "On";
+	$_Application_Module_Member_System_PlugIn_Status_Time						= "On";
 
 } else { // [ + ] IF: The Time Plug-In System Setting Is: Off
 
-	$_Application_Module_Member_System_PlugIn_Status_Time					= "Off";
+	$_Application_Module_Member_System_PlugIn_Status_Time						= "Off";
 
 } // [ + ] IF: The System :: Plug-In :: Status :: Time :: Is: On OR Off
 
@@ -268,11 +284,11 @@ if ($_GLOBAL_SYSTEM_PLUGIN_STATUS_TIME == "1") {
 
 if ($_GLOBAL_SETTING_SYSTEM_SERVICES_MODULE_STATUS_COMMANDER != "1") {
 
-	$_Application_Module_Member_System_System_Services_Status_Commander			= "Off";
+	$_Application_Module_Member_System_System_Services_Status_Commander				= "Off";
 
 } else { // [ + ] IF: The System :: Services :: Status :: Commander :: Is: On OR Off
 
-	$_Application_Module_Member_System_System_Services_Status_Commander			= "On";
+	$_Application_Module_Member_System_System_Services_Status_Commander				= "On";
 
 } // [ + ] IF: The System :: Services :: Status :: Commander :: Is: On OR Off
 
@@ -284,11 +300,11 @@ if ($_GLOBAL_SETTING_SYSTEM_SERVICES_MODULE_STATUS_COMMANDER != "1") {
 
 if ($_GLOBAL_SETTING_SYSTEM_SERVICES_MODULE_STATUS_INTEGRITY != "1") {
 
-	$_Application_Module_Member_System_System_Services_Status_Integrity			= "Off";
+	$_Application_Module_Member_System_System_Services_Status_Integrity				= "Off";
 
 } else { // [ + ] IF: The System :: Services :: Status :: Integrity :: Is: On OR Off
 
-	$_Application_Module_Member_System_System_Services_Status_Integrity			= "On";
+	$_Application_Module_Member_System_System_Services_Status_Integrity				= "On";
 
 } // [ + ] IF: The System :: Services :: Status :: Integrity :: Is: On OR Off
 
@@ -300,11 +316,11 @@ if ($_GLOBAL_SETTING_SYSTEM_SERVICES_MODULE_STATUS_INTEGRITY != "1") {
 
 if ($_GLOBAL_SETTING_SYSTEM_SERVICES_MODULE_STATUS_LOOPS != "1") {
 
-	$_Application_Module_Member_System_System_Services_Status_Loops			= "Off";
+	$_Application_Module_Member_System_System_Services_Status_Loops					= "Off";
 
 } else { // [ + ] IF: The System :: Services :: Status :: Loops :: Is: On OR Off
 
-	$_Application_Module_Member_System_System_Services_Status_Loops			= "On";
+	$_Application_Module_Member_System_System_Services_Status_Loops					= "On";
 
 } // [ + ] IF: The System :: Services :: Status :: Loops :: Is: On OR Off
 
@@ -316,11 +332,11 @@ if ($_GLOBAL_SETTING_SYSTEM_SERVICES_MODULE_STATUS_LOOPS != "1") {
 
 if ($_GLOBAL_SETTING_SYSTEM_SERVICES_MODULE_STATUS_SERVICES != "1") {
 
-	$_Application_Module_Member_System_System_Services_Status_Services			= "Off";
+	$_Application_Module_Member_System_System_Services_Status_Services				= "Off";
 
 } else { // [ + ] IF: The System :: Services :: Status :: Services :: Is: On OR Off
 
-	$_Application_Module_Member_System_System_Services_Status_Services			= "On";
+	$_Application_Module_Member_System_System_Services_Status_Services				= "On";
 
 } // [ + ] IF: The System :: Services :: Status :: Services :: Is: On OR Off
 
@@ -332,11 +348,11 @@ if ($_GLOBAL_SETTING_SYSTEM_SERVICES_MODULE_STATUS_SERVICES != "1") {
 
 if ($_GLOBAL_SETTING_SYSTEM_SERVICES_MODULE_STATUS_TASKS != "1") {
 
-	$_Application_Module_Member_System_System_Services_Status_Tasks			= "Off";
+	$_Application_Module_Member_System_System_Services_Status_Tasks					= "Off";
 
 } else { // [ + ] IF: The System :: Services :: Status :: Tasks :: Is: On OR Off
 
-	$_Application_Module_Member_System_System_Services_Status_Tasks			= "On";
+	$_Application_Module_Member_System_System_Services_Status_Tasks					= "On";
 
 } // [ + ] IF: The System :: Services :: Status :: Tasks :: Is: On OR Off
 
@@ -348,11 +364,11 @@ if ($_GLOBAL_SETTING_SYSTEM_SERVICES_MODULE_STATUS_TASKS != "1") {
 
 if ($_GLOBAL_SETTING_SYSTEM_SECURITY_MODULE_STATUS_MASTER_SANITIZATION != "1") {
 
-	$_Application_Module_Member_System_System_Security_Module_Status_Master_Sanitization = "Off";
+	$_Application_Module_Member_System_System_Security_Module_Status_Master_Sanitization 		= "Off";
 
 } else { // [ + ] IF: The System :: Security :: Module :: Status :: Master Sanitization :: Is: On OR Off
 
-	$_Application_Module_Member_System_System_Security_Module_Status_Master_Sanitization = "On";
+	$_Application_Module_Member_System_System_Security_Module_Status_Master_Sanitization 		= "On";
 
 } // [ + ] IF: The System :: Security :: Module :: Status :: Master Sanitization :: Is: On OR Off
 
@@ -364,11 +380,11 @@ if ($_GLOBAL_SETTING_SYSTEM_SECURITY_MODULE_STATUS_MASTER_SANITIZATION != "1") {
 
 if ($_GLOBAL_SETTING_SYSTEM_SECURITY_SETTING_STATUS_CACHE_CIRCUMVENTION != "1") {
 
-	$_Application_Module_Member_System_System_Security_Module_Status_Cache_Circumvention = "Off";
+	$_Application_Module_Member_System_System_Security_Module_Status_Cache_Circumvention 		= "Off";
 
 } else { // [ + ] IF: The System :: Security :: Module :: Status :: Cache Circumvention :: Is: On OR Off
 
-	$_Application_Module_Member_System_System_Security_Module_Status_Cache_Circumvention = "On";
+	$_Application_Module_Member_System_System_Security_Module_Status_Cache_Circumvention 		= "On";
 
 } // [ + ] IF: The System :: Security :: Module :: Status :: Cache Circumvention :: Is: On OR Off
 
@@ -386,8 +402,8 @@ echo ("
 <B>System :: Settings</B>
 <HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;System&amp;Display&#61;Settings&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: System :: Settings ::\">System :: Settings</A><BR>
-* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;System&amp;Display&#61;Time&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: Statistics ::\">System :: Settings :: Date and Time</A><BR>
-* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;System&amp;Display&#61;Plug-Ins&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: System :: Settings :: Statistics ::\">System :: Settings :: Plug-Ins</A><BR><BR>
+* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;System&amp;Display&#61;Time&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: System :: Settings :: Date and Time ::\">System :: Settings :: Date and Time</A><BR>
+* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;System&amp;Display&#61;Plug-Ins&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: System :: Settings :: Plug-Ins ::\">System :: Settings :: Plug-Ins</A><BR><BR>
 
 <B>System :: Information</B>
 <HR ALIGN=\"LEFT\" WIDTH=\"20%\">
@@ -535,7 +551,7 @@ echo ("
 												<B>Database Management System Server Database Entry :: Kernel File :: Backup :: From Initial Installation</B><BR>
 												*&nbsp;Database Management System Server Database Entry :: Kernel File :: Installation :: Installation Date: $_GLOBAL_SYSTEM_SETTINGS_KERNEL_BACKUP_INSTALLATION_DATE_INSTALLATION<BR>
 												*&nbsp;Database Management System Server Database Entry :: Kernel File :: Installation :: Integrity: $_GLOBAL_SYSTEM_SETTINGS_KERNEL_BACKUP_INSTALLATION_FILE_INTEGRITY<BR>
-												*&nbsp;Database Management System Server Database Entry :: Kernel File :: Installation :: Name: $_GLOBAL_SYSTEM_SETTINGS_KERNEL_BACKUP_INSTALLATION_FILE_NAME<BR>
+												*&nbsp;Database Management System Server Database Entry :: Kernel File :: Installation :: Name: <A HREF=\"./System/Kernel/Backup/Kernel_Installation.kernel\" TITLE=\":: Open & Display :: The Kernel File :: Installation Kernel File ::\" TARGET=\"_NEW\">$_GLOBAL_SYSTEM_SETTINGS_KERNEL_BACKUP_INSTALLATION_FILE_NAME</A><BR>
 												*&nbsp;Database Management System Server Database Entry :: Kernel File :: Installation :: Version: $_GLOBAL_SYSTEM_SETTINGS_KERNEL_BACKUP_INSTALLATION_FILE_VERSION<BR><BR>
 										
 												<B>Database Management System Server Database Entry :: Kernel File :: Backup :: Current</B><BR>
@@ -572,6 +588,16 @@ echo ("
 												<B>Uniform-Resource-Location :: GIT :: Kernel</B><BR>
 												<FORM>
 													<TEXTAREA ROWS=\"7\" COLS=\"50\">$_ACCESS_URL_GIT_REPOSITORY_KERNEL</TEXTAREA>
+												</FORM><BR><BR>
+
+												<B>Uniform-Resource-Location :: GIT :: Plug-Ins</B><BR>
+												<FORM>
+													<TEXTAREA ROWS=\"7\" COLS=\"50\">$_ACCESS_URL_GIT_REPOSITORY_PLUGINS</TEXTAREA>
+												</FORM><BR><BR>
+
+												<B>Uniform-Resource-Location :: GIT :: Themes</B><BR>
+												<FORM>
+													<TEXTAREA ROWS=\"7\" COLS=\"50\">$_ACCESS_URL_GIT_REPOSITORY_THEMES</TEXTAREA>
 												</FORM><BR><BR>
 ");
 												
@@ -615,6 +641,11 @@ echo ("
 											<B>Settings :: System :: Plug-Ins :: Data Processing
 											</B><HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 
+
+											<B>Settings :: System :: Plug-Ins ::</B> <A HREF=\"./System/Plug-Ins/Encryption/$_GLOBAL_SYSTEM_PLUGIN_DIRECTORY_ENCRYPTION/Encryption.$_INTERNAL_FILE_EXTENSION\" TITLE=\":: Open & Display :: The Source Programming Code :: For :: The System Plug-In Application Module :: Encryption ::\" TARGET=\"_NEW\">Encryption</A><BR>
+												*&nbsp;Plug-In :: Encryption :: Directory: $_GLOBAL_SYSTEM_PLUGIN_DIRECTORY_ENCRYPTION<BR>
+												*&nbsp;Plug-In :: Encryption :: Status: $_GLOBAL_SYSTEM_PLUGIN_STATUS_ENCRYPTION | $_Application_Module_Member_System_PlugIn_Status_EncryptionL<BR><BR>
+
 											<B>Settings :: System :: Plug-Ins ::</B> <A HREF=\"./System/Plug-Ins/Safe-HTML/$_GLOBAL_SYSTEM_PLUGIN_DIRECTORY_SAFEHTML/Safe-HTML.$_INTERNAL_FILE_EXTENSION\" TITLE=\":: Open & Display :: The Source Programming Code :: For :: The System Plug-In Application Module :: Safe-HTML ::\" TARGET=\"_NEW\">Safe-HTML</A><BR>
 												*&nbsp;Plug-In :: Safe-HTML :: Directory: $_GLOBAL_SYSTEM_PLUGIN_DIRECTORY_SAFEHTML<BR>
 												*&nbsp;Plug-In :: Safe-HTML :: Status: $_GLOBAL_SYSTEM_PLUGIN_STATUS_SAFEHTML | $_Application_Module_Member_System_PlugIn_Status_SafeHTML<BR><BR>
@@ -645,20 +676,20 @@ echo ("
 
 											<B>Settings :: System :: Services :: Current</B><HR><BR>
 
-											<B>System :: Settings :: Services :: Commander</B><BR>
+											System :: Settings :: Services :: <A HREF=\"./System/Services/Commander\" TITLE=\":: Open & Display :: The Source Programming Code :: For :: The System Application Module :: Commander ::\" TARGET=\"_NEW\">Commander</A><BR>
 												*&nbsp;System :: Services :: Status :: Commander: $_GLOBAL_SETTING_SYSTEM_SERVICES_MODULE_STATUS_COMMANDER | $_Application_Module_Member_System_System_Services_Status_Commander<BR><BR>
 
-											<B>System :: Settings :: Services :: Integrity</B><BR>
+											System :: Settings :: Services :: <A HREF=\"./System/Services/Integrity\" TITLE=\":: Open & Display :: The Source Programming Code :: For :: The System Application Module :: Integrity ::\" TARGET=\"_NEW\">Integrity</A><BR>
 												*&nbsp;System :: Services :: Status :: Integrity: $_GLOBAL_SETTING_SYSTEM_SERVICES_MODULE_STATUS_INTEGRITY | $_Application_Module_Member_System_System_Services_Status_Integrity<BR><BR>
 
-											<B>System :: Settings :: Services :: Loops</B><BR>
+											System :: Settings :: Services :: <A HREF=\"./System/Services/Loops\" TITLE=\":: Open & Display :: The Source Programming Code :: For :: The System Application Module :: Loops ::\" TARGET=\"_NEW\">Loops</A><BR>
 												*&nbsp;System :: Services :: Status :: Loops: $_GLOBAL_SETTING_SYSTEM_SERVICES_MODULE_STATUS_LOOPS | $_Application_Module_Member_System_System_Services_Status_Loops<BR><BR>
 
-											<B>System :: Settings :: Services :: Services</B><BR>
+											System :: Settings :: Services :: <A HREF=\"./System/Services/Services\" TITLE=\":: Open & Display :: The Source Programming Code :: For :: The System Application Module :: Services ::\" TARGET=\"_NEW\">Services</A><BR>
 												*&nbsp;System :: Services :: Status: Services: $_GLOBAL_SETTING_SYSTEM_SERVICES_MODULE_STATUS_SERVICES | $_Application_Module_Member_System_System_Services_Status_Services<BR><BR>
 												
-											<B>System :: Settings :: Services :: Tasks</B><BR>
-												*&nbsp;System :: Services :: Status: Tasks: $_GLOBAL_SETTING_SYSTEM_SERVICES_MODULE_STATUS_TASKS | $_Application_Module_Member_System_System_Services_Status_Services<BR><BR>
+											System :: Settings :: Services :: <A HREF=\"./System/Services/Tasks\" TITLE=\":: Open & Display :: The Source Programming Code :: For :: The System Application Module :: Tasks ::\" TARGET=\"_NEW\">Tasks</A><BR>
+												*&nbsp;System :: Services :: Status: Tasks: $_GLOBAL_SETTING_SYSTEM_SERVICES_MODULE_STATUS_TASKS | $_Application_Module_Member_System_System_Services_Status_Tasks<BR><BR>
 
 											<B>System Security Settings</B><HR><BR>
 
@@ -743,7 +774,7 @@ echo ("
 												*&nbsp;This Web Server :: Time :: In Unix-Epoch: $_GLOBAL_LOCAL_SERVER_TIME_UNIX<BR><BR>
 												
 												<B>Server :: This Web Server :: Time :: Internet Time</B><BR>
-												*&nbsp;This Web Server :: TIme :: In <A HREF=\"https://en.wikipedia.org/wiki/Swatch_Internet_Time\" TITLE=\":: Open & Display :: The Official Wikipedia Article Entry :: For :: Swatch Internet Time ::\" TARGET=\"_NEW\">Swatch Internet Time: $_GLOBAL_LOCAL_SERVER_TIME_SWATCH_INTERNET</A><BR><BR>
+												*&nbsp;This Web Server :: TIme :: In <A HREF=\"https://en.wikipedia.org/wiki/Internet_Time\" TITLE=\":: Open & Display :: The Official Wikipedia Article Entry :: For :: Internet Time ::\" TARGET=\"_NEW\">Internet Time: $_GLOBAL_LOCAL_SERVER_TIME_INTERNET</A><BR><BR>
 
 												<B>Unix-Epoch :: Time :: Built-In</B><HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 												*&nbsp;This Web Server :: Time :: In Microtime: $_GLOBAL_LOCAL_SERVER_TIME_MICROTIME<BR>

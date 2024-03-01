@@ -163,7 +163,7 @@ while ($_Application_Module_Administration_Archive_DIRECTORY_FILE = readdir($_Ap
  ============================================================================================================
 */
 
-if ($_Application_Module_Administration_Archive_DIRECTORY_FILE != '.' && $_Application_Module_Administration_Archive_DIRECTORY_FILE != '..') {
+if (($_Application_Module_Administration_Archive_DIRECTORY_FILE != ".") && ($_Application_Module_Administration_Archive_DIRECTORY_FILE != "..")) {
 
 /*
  ============================================================================================================
@@ -187,7 +187,7 @@ $_Application_Module_Administration_Archive_POST_ARCHIVE_SELECTIONS[] 				= $_Ap
 
 } // [ + ] IF, ELSE IF: Archive :: File Selection: IS File OR Directory
 
-} // [ + ] IF: Archive :: Selection :: IS NOT Escaping Directory
+} // [ + ] IF: Archive :: Selection :: IS NOT: Escaping Directory
 
 /*
  ============================================================================================================
@@ -219,7 +219,7 @@ $_Application_Module_Administration_Archive_INITIALIZE_ZIP->close();
 
 } else {
 
-													echo ("$_Message_ERROR_ACTION_UNIVERSAL [ PHP Version ]");
+													echo ("$_Message_ERROR_ACTION_UNIVERSAL [ Pre-Hyper-Text-Post-Processor Version Number ]");
 
 } // [ + ] IF: Archive :: Open :: New Archive File
 
@@ -246,7 +246,7 @@ $_Application_Module_Administration_Archive_INITIALIZE_ZIP->close();
 $_Application_Module_Administration_Archive_FIND_ARCHIVE_DIRECTORY				= "./Applications/Administration/System_Archive/";
 $_Application_Module_Administration_Archive_OPEN_ARCHIVE_DIRECTORY				= opendir($_Application_Module_Administration_Archive_FIND_ARCHIVE_DIRECTORY);
 
-													echo ("<HR><CENTER><B>Existing Archives</B></CENTER><HR>");
+													echo ("<HR><CENTER><B>Existing Archive Packages</B></CENTER><HR>");
 
 /*
  ============================================================================================================
@@ -277,7 +277,7 @@ Archive: $_Application_Module_Administration_Archive_READ_ARCHIVE_DIRECTORY<BR>
 /*
  ============================================================================================================
  +
- + IF: Internal Application: Delete :: Archive
+ + IF: Internal Application: Delete :: File :: Archive Package
  +
  ============================================================================================================
 */
